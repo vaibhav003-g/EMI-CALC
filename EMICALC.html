@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head><title>EMI CALC</title>
+    <META NAME="VIEWPORT" CONTENT="WIDTH=DEVICE-WIDTH,INITIAL-SCALE=1.0">
+    <script>
+function calc()
+{
+    var a=document.getElementById("txt1").value;
+    var b=document.getElementById("txt2").value;
+    var x=parseInt(a);
+    var y=parseInt(b);
+    var z=x-y;
+    var c=document.getElementById("txt3");
+    c.value=z;
+
+    var d=document.getElementById("txt4").value;
+   var e=document.getElementById("txt5").value;
+    var x1=parseInt(d);
+    var y1=parseInt(e);
+    var z1=z*d*e/100;
+    var f=document.getElementById("txt6");
+    f.value=z1;
+
+    var z2=z+z1;
+    var g=document.getElementById("txt7");
+    g.value=z2;
+
+    var z3=z2/(12*e);
+    var h=document.getElementById("txt8");
+    h.value=z3;
+
+
+
+}        
+
+    </script></head>
+        <BODY>
+            <TABLE WIDTH="100%">
+                <TR><TD COLSPAN="4" ALIGN="CENTER" style="color:blueviolet"><b>EMI CALCULATOR</b></TD></TR>
+<tr><td colspan="4" align="center" STYLE="COLOR:red"><marquee direction="right"><H1>YOUR LOAN AMOUNT</H1></marquee></td></tr>                
+<TR><TD WIDTH="50%" ALIGN="CENTER">REAL AMOUNT:</TD><TD WIDTH="50%"><INPUT TYPE="TEXT" PLACEHOLDER="ENTER REAL AMOUNT" COLS="36" id="txt1"></TD></TR>
+<TR><TD  WIDTH="50%" ALIGN="CENTER">DOWN PAYMENT:</TD><TD WIDTH="50%"><INPUT TYPE="TEXT" PLACEHOLDER="ENTER DOWN PAYMENT" COLS="36" id="txt2"></TD></TR>    
+<TR><TD  WIDTH="50%" ALIGN="CENTER">LOAN AMOUNT:</TD><TD WIDTH="50%"><INPUT TYPE="TEXT" PLACEHOLDER="LOAN AMOUNT" COLS="36" id="txt3"></TD></TR>
+<TR><TD COLSPAN="4" ALIGN="CENTER" style="color:red"><marquee direction="right"><H2>YOUR SIMPLE INTEREST</H2></marquee></TD></TR>    
+<TR><TD  WIDTH="50%" ALIGN="CENTER">RATE:</TD><TD WIDTH="50%"><INPUT TYPE="TEXT" PLACEHOLDER="ENTER RATE" COLS="36" id="txt4"></TD></TR>
+<TR><TD  WIDTH="50%" ALIGN="CENTER">DURATION:</TD><TD WIDTH="50%"><INPUT TYPE="TEXT" PLACEHOLDER="ENTER DURATION" COLS="36" id="txt5"></TD></TR>
+<TR><TD  WIDTH="50%" ALIGN="CENTER">SIMPLE INTEREST:</TD><TD WIDTH="50%"><INPUT TYPE="TEXT" PLACEHOLDER="SIMPLE INTEREST" COLS="36" id="txt6"></TD></TR>    
+<TR><TD  WIDTH="50%" ALIGN="CENTER">TOTAL AMOUNT(BANK):</TD><TD WIDTH="50%"><INPUT TYPE="TEXT" PLACEHOLDER="TOTAL AMOUNT" COLS="36" id="txt7"></TD></TR>
+<TR><TD COLSPAN="4" ALIGN="CENTER" style="color:red"><marquee direction="left"><H3>EMI TO BE PAID BY YOU</H3></marquee></TD></TR>    
+<TR><TD  WIDTH="50%" ALIGN="CENTER">EMI:</TD><TD WIDTH="50%"><INPUT TYPE="TEXT" PLACEHOLDER="EMI" COLS="36" id="txt8"></TD></TR>
+<TR><TD COLSPAN="4" ALIGN="CENTER"><INPUT TYPE="button" VALUE="CALCULATE" onclick="calc()" style="color:blueviolet;"></TD></TR>  
+
+            </TABLE>
+        </BODY>
+</html>
